@@ -1,0 +1,42 @@
+train_data_hourly_pr_['HRES']_['HSAF']_MM_6__spatiotemporal_128.256_2020-07-01T13_2023-03-26T23_no_na
+Data is available already
+Loading training data...
+mse_128_1e-06_1e-14_0.1_2_4_8_0.5_64
+Training the model...
+Epoch 1/64
+
+Epoch 1: val_loss improved from inf to 0.10453, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_128_1e-06_1e-14_0.1_2_4_8_0.5_64.h5
+2996/2996 - 748s - loss: 0.2004 - mse: 0.4897 - val_loss: 0.1045 - val_mse: 0.2572 - lr: 1.0000e-06 - 748s/epoch - 250ms/step
+Epoch 2/64
+
+Epoch 2: val_loss did not improve from 0.10453
+2996/2996 - 713s - loss: 0.0950 - mse: 0.2320 - val_loss: 0.1049 - val_mse: 0.2581 - lr: 1.0000e-06 - 713s/epoch - 238ms/step
+Epoch 3/64
+
+Epoch 3: val_loss did not improve from 0.10453
+2996/2996 - 713s - loss: 0.0883 - mse: 0.2158 - val_loss: 0.1055 - val_mse: 0.2596 - lr: 1.0000e-06 - 713s/epoch - 238ms/step
+Epoch 4/64
+
+Epoch 4: val_loss did not improve from 0.10453
+2996/2996 - 713s - loss: 0.0864 - mse: 0.2112 - val_loss: 0.1060 - val_mse: 0.2608 - lr: 1.0000e-07 - 713s/epoch - 238ms/step
+Epoch 5/64
+
+Epoch 5: val_loss did not improve from 0.10453
+2996/2996 - 714s - loss: 0.0861 - mse: 0.2103 - val_loss: 0.1049 - val_mse: 0.2582 - lr: 1.0000e-07 - 714s/epoch - 238ms/step
+Epoch 6/64
+
+Epoch 6: val_loss did not improve from 0.10453
+2996/2996 - 714s - loss: 0.0861 - mse: 0.2104 - val_loss: 0.1055 - val_mse: 0.2597 - lr: 1.0000e-08 - 714s/epoch - 238ms/step
+Epoch 7/64
+
+Epoch 7: val_loss did not improve from 0.10453
+2996/2996 - 714s - loss: 0.0857 - mse: 0.2094 - val_loss: 0.1066 - val_mse: 0.2624 - lr: 1.0000e-08 - 714s/epoch - 238ms/step
+Epoch 8/64
+
+Epoch 8: val_loss did not improve from 0.10453
+2996/2996 - 714s - loss: 0.0859 - mse: 0.2100 - val_loss: 0.1056 - val_mse: 0.2599 - lr: 1.0000e-09 - 714s/epoch - 238ms/step
+Epoch 9/64
+
+Epoch 9: val_loss did not improve from 0.10453
+2996/2996 - 714s - loss: 0.0860 - mse: 0.2100 - val_loss: 0.1066 - val_mse: 0.2622 - lr: 1.0000e-09 - 714s/epoch - 238ms/step
+Saving and plotting the results...

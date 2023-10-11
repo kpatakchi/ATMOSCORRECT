@@ -1,0 +1,30 @@
+# Environment for bash scripts:
+# Modules:
+#!/bin/bash
+{
+#------------------------
+module -force purge
+module load Stages/2022  GCC/11.2.0  OpenMPI/4.1.1
+module load CDO/2.0.2
+module load NCO
+
+#------------------------
+} &> /dev/null
+# Directories:
+export HSAF_UTI=/p/project/deepacf/kiste/patakchiyousefi1/IO/hsaf_ut/ftphsaf.meteoam.it/utilities/matlab_code
+export HSAF_OR=/p/scratch/deepacf/kiste/patakchiyousefi1/H_SAF
+export HSAF_PP=/p/scratch/deepacf/kiste/patakchiyousefi1/H_SAF_PP
+export HSAF_DUMP=/p/scratch/deepacf/kiste/patakchiyousefi1/H_SAF_DUMP
+export HSAF_LOG=/p/scratch/deepacf/kiste/patakchiyousefi1/H_SAF_LOG
+export HRES_UTI=/p/project/deepacf/kiste/patakchiyousefi1/IO/hres_ut/
+export HSAF_RG=/p/scratch/deepacf/kiste/patakchiyousefi1/HSAF_RG
+export HRES_OR=/p/scratch/deepacf/kiste/patakchiyousefi1/H_RES
+export HRES_PP=/p/scratch/deepacf/kiste/patakchiyousefi1/H_RES_PP
+export HRES_DUMP=/p/scratch/deepacf/kiste/patakchiyousefi1/H_RES_DUMP
+export HRES_LOG=/p/scratch/deepacf/kiste/patakchiyousefi1/H_RES_LOG
+export HSAF_UTI=/p/project/deepacf/kiste/patakchiyousefi1/IO/hsaf_ut/ftphsaf.meteoam.it/utilities/matlab_code
+export EXA_DIR=/p/project/deepacf/kiste/patakchiyousefi1/MISC/Test_Resample_HSAF_KPI
+export HSAF_RG=/p/scratch/deepacf/kiste/patakchiyousefi1/HSAF_RG
+# END
+
+

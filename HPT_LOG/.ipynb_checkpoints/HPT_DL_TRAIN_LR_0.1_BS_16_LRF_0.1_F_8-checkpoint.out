@@ -1,0 +1,262 @@
+train_data_hourly_pr_['HRES']_['HSAF']_MM_6__spatiotemporal_128.256_2020-07-01T13_2023-03-26T23_no_na
+Data is available already
+Loading training data...
+mse_8_0.1_1e-05_0.1_2_16_8_0.5_64
+Training the model...
+Epoch 1/64
+
+Epoch 1: val_loss improved from inf to 2.23705, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 37s - loss: 9969.2656 - mse: 555130.9375 - val_loss: 2.2370 - val_mse: 615921.8750 - lr: 0.1000 - 37s/epoch - 50ms/step
+Epoch 2/64
+
+Epoch 2: val_loss improved from 2.23705 to 0.24027, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 16s - loss: 0.3665 - mse: 602662.9375 - val_loss: 0.2403 - val_mse: 611674.7500 - lr: 0.1000 - 16s/epoch - 22ms/step
+Epoch 3/64
+
+Epoch 3: val_loss did not improve from 0.24027
+749/749 - 16s - loss: 0.1583 - mse: 603727.1250 - val_loss: 4.0165 - val_mse: 610676.6875 - lr: 0.1000 - 16s/epoch - 22ms/step
+Epoch 4/64
+
+Epoch 4: val_loss did not improve from 0.24027
+749/749 - 16s - loss: 0.1026 - mse: 604233.9375 - val_loss: 1.7964 - val_mse: 625133.5625 - lr: 0.1000 - 16s/epoch - 22ms/step
+Epoch 5/64
+
+Epoch 5: val_loss improved from 0.24027 to 0.04103, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0267 - mse: 604376.0625 - val_loss: 0.0410 - val_mse: 610311.6250 - lr: 0.0100 - 17s/epoch - 23ms/step
+Epoch 6/64
+
+Epoch 6: val_loss improved from 0.04103 to 0.01777, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0229 - mse: 604636.1250 - val_loss: 0.0178 - val_mse: 611531.9375 - lr: 0.0100 - 17s/epoch - 23ms/step
+Epoch 7/64
+
+Epoch 7: val_loss did not improve from 0.01777
+749/749 - 17s - loss: 0.0214 - mse: 604845.5000 - val_loss: 0.2645 - val_mse: 611039.5000 - lr: 0.0100 - 17s/epoch - 23ms/step
+Epoch 8/64
+
+Epoch 8: val_loss did not improve from 0.01777
+749/749 - 17s - loss: 0.0190 - mse: 605028.2500 - val_loss: 0.2433 - val_mse: 611176.5625 - lr: 0.0100 - 17s/epoch - 22ms/step
+Epoch 9/64
+
+Epoch 9: val_loss did not improve from 0.01777
+749/749 - 17s - loss: 0.0137 - mse: 605131.0625 - val_loss: 0.0395 - val_mse: 612205.6250 - lr: 1.0000e-03 - 17s/epoch - 22ms/step
+Epoch 10/64
+
+Epoch 10: val_loss did not improve from 0.01777
+749/749 - 17s - loss: 0.0137 - mse: 605164.8750 - val_loss: 0.0957 - val_mse: 611968.8125 - lr: 1.0000e-03 - 17s/epoch - 22ms/step
+Epoch 11/64
+
+Epoch 11: val_loss improved from 0.01777 to 0.01118, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0130 - mse: 605186.3125 - val_loss: 0.0112 - val_mse: 612740.9375 - lr: 1.0000e-04 - 17s/epoch - 22ms/step
+Epoch 12/64
+
+Epoch 12: val_loss did not improve from 0.01118
+749/749 - 17s - loss: 0.0127 - mse: 605191.9375 - val_loss: 0.0130 - val_mse: 612813.6875 - lr: 1.0000e-04 - 17s/epoch - 22ms/step
+Epoch 13/64
+
+Epoch 13: val_loss did not improve from 0.01118
+749/749 - 16s - loss: 0.0127 - mse: 605200.1250 - val_loss: 0.0156 - val_mse: 612549.1250 - lr: 1.0000e-04 - 16s/epoch - 22ms/step
+Epoch 14/64
+
+Epoch 14: val_loss did not improve from 0.01118
+749/749 - 16s - loss: 0.0125 - mse: 605203.3750 - val_loss: 0.0114 - val_mse: 612647.5000 - lr: 1.0000e-05 - 16s/epoch - 21ms/step
+Epoch 15/64
+
+Epoch 15: val_loss did not improve from 0.01118
+749/749 - 17s - loss: 0.0125 - mse: 605207.1250 - val_loss: 0.0122 - val_mse: 612645.7500 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 16/64
+
+Epoch 16: val_loss improved from 0.01118 to 0.01093, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0125 - mse: 605209.6875 - val_loss: 0.0109 - val_mse: 612641.2500 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 17/64
+
+Epoch 17: val_loss improved from 0.01093 to 0.01091, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0124 - mse: 605213.5625 - val_loss: 0.0109 - val_mse: 612768.1250 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 18/64
+
+Epoch 18: val_loss did not improve from 0.01091
+749/749 - 16s - loss: 0.0124 - mse: 605214.8750 - val_loss: 0.0123 - val_mse: 612573.0625 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 19/64
+
+Epoch 19: val_loss improved from 0.01091 to 0.01075, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 16s - loss: 0.0125 - mse: 605217.8125 - val_loss: 0.0107 - val_mse: 612667.8125 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 20/64
+
+Epoch 20: val_loss did not improve from 0.01075
+749/749 - 17s - loss: 0.0123 - mse: 605223.3750 - val_loss: 0.0122 - val_mse: 612609.0000 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 21/64
+
+Epoch 21: val_loss improved from 0.01075 to 0.01063, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0122 - mse: 605224.7500 - val_loss: 0.0106 - val_mse: 612652.8125 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 22/64
+
+Epoch 22: val_loss did not improve from 0.01063
+749/749 - 17s - loss: 0.0120 - mse: 605230.8750 - val_loss: 0.0136 - val_mse: 612561.5000 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 23/64
+
+Epoch 23: val_loss did not improve from 0.01063
+749/749 - 17s - loss: 0.0119 - mse: 605235.0625 - val_loss: 0.0129 - val_mse: 612594.0000 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 24/64
+
+Epoch 24: val_loss improved from 0.01063 to 0.01029, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0119 - mse: 605238.5000 - val_loss: 0.0103 - val_mse: 612711.3750 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 25/64
+
+Epoch 25: val_loss improved from 0.01029 to 0.01011, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0117 - mse: 605245.0000 - val_loss: 0.0101 - val_mse: 612759.5625 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 26/64
+
+Epoch 26: val_loss improved from 0.01011 to 0.01006, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 16s - loss: 0.0116 - mse: 605247.0625 - val_loss: 0.0101 - val_mse: 612913.3750 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 27/64
+
+Epoch 27: val_loss did not improve from 0.01006
+749/749 - 16s - loss: 0.0113 - mse: 605249.8750 - val_loss: 0.0106 - val_mse: 612823.5000 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 28/64
+
+Epoch 28: val_loss did not improve from 0.01006
+749/749 - 17s - loss: 0.0111 - mse: 605251.6250 - val_loss: 0.0102 - val_mse: 612877.6875 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 29/64
+
+Epoch 29: val_loss did not improve from 0.01006
+749/749 - 17s - loss: 0.0109 - mse: 605253.7500 - val_loss: 0.0101 - val_mse: 612811.6250 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 30/64
+
+Epoch 30: val_loss improved from 0.01006 to 0.00950, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0108 - mse: 605257.1250 - val_loss: 0.0095 - val_mse: 612664.8125 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 31/64
+
+Epoch 31: val_loss improved from 0.00950 to 0.00927, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0106 - mse: 605258.5625 - val_loss: 0.0093 - val_mse: 612779.8750 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 32/64
+
+Epoch 32: val_loss did not improve from 0.00927
+749/749 - 17s - loss: 0.0104 - mse: 605260.0000 - val_loss: 0.0110 - val_mse: 612931.5000 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 33/64
+
+Epoch 33: val_loss did not improve from 0.00927
+749/749 - 16s - loss: 0.0102 - mse: 605263.9375 - val_loss: 0.0093 - val_mse: 612833.3125 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 34/64
+
+Epoch 34: val_loss did not improve from 0.00927
+749/749 - 16s - loss: 0.0101 - mse: 605264.6875 - val_loss: 0.0137 - val_mse: 612474.3750 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 35/64
+
+Epoch 35: val_loss improved from 0.00927 to 0.00859, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 16s - loss: 0.0099 - mse: 605266.3125 - val_loss: 0.0086 - val_mse: 612733.7500 - lr: 1.0000e-05 - 16s/epoch - 21ms/step
+Epoch 36/64
+
+Epoch 36: val_loss improved from 0.00859 to 0.00839, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 16s - loss: 0.0097 - mse: 605268.8750 - val_loss: 0.0084 - val_mse: 612708.6250 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 37/64
+
+Epoch 37: val_loss did not improve from 0.00839
+749/749 - 16s - loss: 0.0096 - mse: 605270.3125 - val_loss: 0.0088 - val_mse: 612680.3125 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 38/64
+
+Epoch 38: val_loss improved from 0.00839 to 0.00834, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 16s - loss: 0.0094 - mse: 605272.4375 - val_loss: 0.0083 - val_mse: 612755.8750 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 39/64
+
+Epoch 39: val_loss improved from 0.00834 to 0.00821, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0093 - mse: 605274.5000 - val_loss: 0.0082 - val_mse: 612711.0625 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 40/64
+
+Epoch 40: val_loss did not improve from 0.00821
+749/749 - 17s - loss: 0.0090 - mse: 605278.0625 - val_loss: 0.0094 - val_mse: 612656.3125 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 41/64
+
+Epoch 41: val_loss improved from 0.00821 to 0.00792, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0090 - mse: 605280.6250 - val_loss: 0.0079 - val_mse: 612749.8750 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 42/64
+
+Epoch 42: val_loss improved from 0.00792 to 0.00772, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0088 - mse: 605283.4375 - val_loss: 0.0077 - val_mse: 612831.7500 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 43/64
+
+Epoch 43: val_loss improved from 0.00772 to 0.00747, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0086 - mse: 605284.4375 - val_loss: 0.0075 - val_mse: 612857.2500 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 44/64
+
+Epoch 44: val_loss improved from 0.00747 to 0.00744, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0085 - mse: 605286.5000 - val_loss: 0.0074 - val_mse: 612996.1250 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 45/64
+
+Epoch 45: val_loss did not improve from 0.00744
+749/749 - 17s - loss: 0.0085 - mse: 605288.0625 - val_loss: 0.0077 - val_mse: 612887.5000 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 46/64
+
+Epoch 46: val_loss did not improve from 0.00744
+749/749 - 16s - loss: 0.0083 - mse: 605289.9375 - val_loss: 0.0076 - val_mse: 612726.4375 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 47/64
+
+Epoch 47: val_loss improved from 0.00744 to 0.00721, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0081 - mse: 605293.3750 - val_loss: 0.0072 - val_mse: 612840.9375 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 48/64
+
+Epoch 48: val_loss did not improve from 0.00721
+749/749 - 17s - loss: 0.0080 - mse: 605293.5000 - val_loss: 0.0082 - val_mse: 612754.3750 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 49/64
+
+Epoch 49: val_loss did not improve from 0.00721
+749/749 - 17s - loss: 0.0079 - mse: 605296.4375 - val_loss: 0.0089 - val_mse: 612665.0625 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 50/64
+
+Epoch 50: val_loss improved from 0.00721 to 0.00689, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0078 - mse: 605296.5625 - val_loss: 0.0069 - val_mse: 612855.5625 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 51/64
+
+Epoch 51: val_loss did not improve from 0.00689
+749/749 - 16s - loss: 0.0076 - mse: 605299.8750 - val_loss: 0.0070 - val_mse: 612926.7500 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 52/64
+
+Epoch 52: val_loss did not improve from 0.00689
+749/749 - 16s - loss: 0.0076 - mse: 605302.5000 - val_loss: 0.0075 - val_mse: 612729.8125 - lr: 1.0000e-05 - 16s/epoch - 21ms/step
+Epoch 53/64
+
+Epoch 53: val_loss improved from 0.00689 to 0.00687, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 16s - loss: 0.0074 - mse: 605303.8125 - val_loss: 0.0069 - val_mse: 612713.1875 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 54/64
+
+Epoch 54: val_loss improved from 0.00687 to 0.00672, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0074 - mse: 605306.6250 - val_loss: 0.0067 - val_mse: 612718.9375 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 55/64
+
+Epoch 55: val_loss improved from 0.00672 to 0.00626, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0073 - mse: 605307.3125 - val_loss: 0.0063 - val_mse: 612953.3750 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 56/64
+
+Epoch 56: val_loss improved from 0.00626 to 0.00624, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 16s - loss: 0.0072 - mse: 605307.8125 - val_loss: 0.0062 - val_mse: 612798.5000 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 57/64
+
+Epoch 57: val_loss did not improve from 0.00624
+749/749 - 17s - loss: 0.0070 - mse: 605309.8750 - val_loss: 0.0064 - val_mse: 612945.2500 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 58/64
+
+Epoch 58: val_loss did not improve from 0.00624
+749/749 - 17s - loss: 0.0070 - mse: 605310.9375 - val_loss: 0.0070 - val_mse: 612878.4375 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 59/64
+
+Epoch 59: val_loss improved from 0.00624 to 0.00610, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0069 - mse: 605312.9375 - val_loss: 0.0061 - val_mse: 612739.1250 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 60/64
+
+Epoch 60: val_loss improved from 0.00610 to 0.00585, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0067 - mse: 605315.0625 - val_loss: 0.0058 - val_mse: 612810.8125 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Epoch 61/64
+
+Epoch 61: val_loss did not improve from 0.00585
+749/749 - 16s - loss: 0.0067 - mse: 605317.2500 - val_loss: 0.0062 - val_mse: 612906.3750 - lr: 1.0000e-05 - 16s/epoch - 22ms/step
+Epoch 62/64
+
+Epoch 62: val_loss did not improve from 0.00585
+749/749 - 17s - loss: 0.0066 - mse: 605317.8125 - val_loss: 0.0059 - val_mse: 612893.8125 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 63/64
+
+Epoch 63: val_loss did not improve from 0.00585
+749/749 - 17s - loss: 0.0064 - mse: 605320.0625 - val_loss: 0.0076 - val_mse: 612718.2500 - lr: 1.0000e-05 - 17s/epoch - 23ms/step
+Epoch 64/64
+
+Epoch 64: val_loss improved from 0.00585 to 0.00584, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_8_0.1_1e-05_0.1_2_16_8_0.5_64.h5
+749/749 - 17s - loss: 0.0064 - mse: 605321.8125 - val_loss: 0.0058 - val_mse: 612870.0000 - lr: 1.0000e-05 - 17s/epoch - 22ms/step
+Saving and plotting the results...

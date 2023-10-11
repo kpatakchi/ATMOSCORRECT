@@ -1,0 +1,17 @@
+2023-07-25 14:54:56.177266: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38246 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:03:00.0, compute capability: 8.0
+2023-07-25 14:54:56.179101: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 38246 MB memory:  -> device: 1, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:44:00.0, compute capability: 8.0
+2023-07-25 14:54:56.180769: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:2 with 38246 MB memory:  -> device: 2, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:84:00.0, compute capability: 8.0
+2023-07-25 14:54:56.182382: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:3 with 38246 MB memory:  -> device: 3, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:c4:00.0, compute capability: 8.0
+Traceback (most recent call last):
+  File "/p/project/deepacf/kiste/patakchiyousefi1/CODES/CODES-MS2/PLAYGROUND/ATMOSCORRECT/DL_EVAL.py", line 70, in <module>
+    model.load_weights(model_path)
+  File "/p/software/juwelsbooster/stages/2023/software/TensorFlow/2.11.0-gcccoremkl-11.3.0-2022.1.0-CUDA-11.7/lib/python3.10/site-packages/keras/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/p/software/juwelsbooster/stages/2023/software/h5py/3.7.0-GCCcore-11.3.0-serial/lib/python3.10/site-packages/h5py/_hl/files.py", line 533, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/p/software/juwelsbooster/stages/2023/software/h5py/3.7.0-GCCcore-11.3.0-serial/lib/python3.10/site-packages/h5py/_hl/files.py", line 226, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 106, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to open file (unable to open file: name = '/p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_64_0.001_1e-14_0.5_2_16_8_0.1_64.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
