@@ -81,7 +81,7 @@ We added the original HRES data into this folder: "p/scratch/deepacf/kiste/patak
 Must adapt ctrl/ParFlowCLMPreProAtmForcing\_2.ksh to your forcing files. The following changes were made:
 
 - added # 2023-04-07 k.patakchi.yousefi@fz-juelich.de patakchiyousefi
-- Commented out line 167 #cp ${ECMWF\_DATASTREAM}/${infile} ${DIRFORCINGIN}
+- Commented out line 167 cp ${ECMWF\_DATASTREAM}/${infile} ${DIRFORCINGIN}
 
 The initialization files are located here (you will start from climatology v02): /p/largedata/dpfgpude05/sim/ADAPTER\_DE05\_ECMWF-HRES\_detforecast\_\_FZJ-IBG3-ParFlowCLM380D\_v02bJurecaGpuProdClimatologyTl\_PRhourly/simres
 
@@ -111,7 +111,7 @@ Changes in this file:
 - EMAILUSER
 - NO\_OF\_MONTHS
 - INIDATE
-- # 2023-04-07 k.patakchi.yousefi@fz-juelich.de patakchiyousefi1 adapted from goergen1
+- 2023-04-07 k.patakchi.yousefi@fz-juelich.de patakchiyousefi1 adapted from goergen1
 
 **For the simulations:
  login on **** JUWELS Booster ****, go to ctrl: ./ParFlowCLMStarterJuwelsChainJob\_RunSim\_2.ksh -\> indicate the start date and the number of months in the script. You can also indicate the job ID of a queuing job to extend the job chain without interruption**
@@ -121,7 +121,7 @@ Changes in this file:
 - EMAILUSER
 - NO\_OF\_MONTHS
 - INIDATE
-- # 2023-04-07 k.patakchi.yousefi@fz-juelich.de patakchiyousefi1 adapeted from goergen1
+- 2023-04-07 k.patakchi.yousefi@fz-juelich.de patakchiyousefi1 adapeted from goergen1
 
 Now, for ADAPTER\_DE05\_ECMWF-HRES\_detforecast\_\_FZJ-IBG3-ParFlowCLM380D\_v03bJuwelsGpuProdClimatologyTl\_PRhourly\_HRES\_CORRECTED:
 
