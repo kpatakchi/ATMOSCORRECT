@@ -159,15 +159,13 @@ Use DE05\_validation and DE05\_validation\_hres\_c for validation of ParFlow run
 
 Use SM\_ESACCI for each validation folder.For validation of HRES\_C, the following changes need to be made from the duplicate of HRES validation:
 
-    1. Remove download.bash
-    2. Remove dap.ceda.ac.uk (is not needed, can obtain from the other folder)
-    3. Remove ESACCI\_combined\*
-    4. Remove ParFlowCLM\_volSM\_\*
+* Remove download.bash
+* Remove dap.ceda.ac.uk (is not needed, can obtain from the other folder
+* Remove ESACCI\_combined\*
+* Remove ParFlowCLM\_volSM\_\*
 
 Make the following changes in Extract\_regrid\_ParFlow\_VolSM\_clim.py:
 
-    1. Change runname
-
-Copy ParFlowCLM\_DE05.out.0000.nc to the directory
-
-Change plotmonthly script (run name, datadir and file pattern).
+* Change runname
+* Copy ParFlowCLM\_DE05.out.0000.nc to the directory
+* Change plotmonthly script (run name, datadir and file pattern).
