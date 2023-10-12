@@ -1,6 +1,4 @@
-# ATMOSCORRECT
-
-# GUIDE
+# ATMOSCORRECT & PARFLOWCLM
 
 _Author: Kaveh Patakchi Yousefi_
 
