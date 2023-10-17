@@ -433,7 +433,7 @@ def prepare_train(PPROJECT_DIR, TRAIN_FILES, ATMOS_DATA, filename, model_data, r
         SPP = spatiodataloader(topo_dir, X_TRAIN.shape)
 
         if mask_type == "no_na":
-            canvas_m = np.ones_like(canvas_y)  # mask for na values (-9999)
+            canvas_m = np.ones_like(canvas_y)  
             canvas_m[canvas_y == -999] = 0
             SPP_canvas = make_canvas(SPP, canvas_size, trim)
             land=SPP_canvas[..., 2]>0*1
@@ -442,6 +442,34 @@ def prepare_train(PPROJECT_DIR, TRAIN_FILES, ATMOS_DATA, filename, model_data, r
             outbound = np.nanmean(canvas_m[:, ..., 0], axis=0) > 0.999
             for i in range(canvas_m.shape[0]):
                 canvas_m[i, outbound, 0] = 0
+                
+        if mask_type == "no_na_intensity":
+            TRUTH = Y_TRAIN - X_TRAIN #reference(to be used in intensity weights)
+            canvas_t = make_canvas(TRUTH, canvas_size, trim)
+            greater_zero = canvas_t[..., 0]>=0
+            less_pointone = canvas_t[..., 0]<0.1
+            greater_pointone = canvas_t[..., 0]>=0.1
+            less_twohalf = canvas_t[..., 0]<2.5
+            greater_twohalf = canvas_t[..., 0]>=2.5
+            dry=greater_zero*less_pointone
+            light=greater_pointone*less_twohalf
+            heavy=greater_twohalf
+
+            canvas_m = np.ones_like(canvas_y) 
+            canvas_m[canvas_y == -999] = 0 #replace nan with 0
+            SPP_canvas = make_canvas(SPP, canvas_size, trim)
+            land=SPP_canvas[..., 2]>0*1
+            canvas_m[..., 0] = canvas_m[..., 0]*land #only on land
+            
+            # to remove the ones out of the boundaries:
+            outbound = np.nanmean(canvas_m[:, ..., 0], axis=0) > 0.999
+            for i in range(canvas_m.shape[0]):
+                canvas_m[i, outbound, 0] = 0.
+                
+            canvas_m[dry] *= 0.01  # Multiply by 0.01 in dry conditions
+            canvas_m[light] *= 0.04  # Multiply by 0.04 in light conditions
+            canvas_m[heavy] *= 0.95  # Multiply by 0.95 in heavy conditions
+                
 
         if task_name == "model_only":
             X_TRAIN = X_TRAIN
@@ -624,6 +652,35 @@ def prepare_produce(PPROJECT_DIR, PRODUCE_FILES, ATMOS_DATA, filename, model_dat
             outbound = np.nanmean(canvas_m[:, ..., 0], axis=0) > 0.999
             for i in range(canvas_m.shape[0]):
                 canvas_m[i, outbound, 0] = 0
+                
+                
+        if mask_type == "no_na_intensity":
+            TRUTH = Y_TRAIN - X_TRAIN #reference(to be used in intensity weights)
+            canvas_t = make_canvas(TRUTH, canvas_size, trim)
+            greater_zero = canvas_t[..., 0]>=0
+            less_pointone = canvas_t[..., 0]<0.1
+            greater_pointone = canvas_t[..., 0]>=0.1
+            less_twohalf = canvas_t[..., 0]<2.5
+            greater_twohalf = canvas_t[..., 0]>=2.5
+            dry=greater_zero*less_pointone
+            light=greater_pointone*less_twohalf
+            heavy=greater_twohalf
+
+            canvas_m = np.ones_like(canvas_y) 
+            canvas_m[canvas_y == -999] = 0 #replace nan with 0
+            SPP_canvas = make_canvas(SPP, canvas_size, trim)
+            land=SPP_canvas[..., 2]>0*1
+            canvas_m[..., 0] = canvas_m[..., 0]*land #only on land
+            
+            # to remove the ones out of the boundaries:
+            outbound = np.nanmean(canvas_m[:, ..., 0], axis=0) > 0.999
+            for i in range(canvas_m.shape[0]):
+                canvas_m[i, outbound, 0] = 0.
+                
+            canvas_m[dry] *= 0.01  # Multiply by 0.01 in dry conditions
+            canvas_m[light] *= 0.04  # Multiply by 0.04 in light conditions
+            canvas_m[heavy] *= 0.95  # Multiply by 0.95 in heavy conditions
+            
 
         if task_name == "model_only":
             X_TRAIN = X_TRAIN

@@ -1,8 +1,8 @@
 #!/bin/sh
 
-#SBATCH --job-name=HPT_BOOSTER
-#SBATCH --output=HPT_LOG/HPT_BOOSTER.out
-#SBATCH --error=HPT_LOG/HPT_BOOSTER.err
+#SBATCH --job-name=HPT_BOOSTER_intensity
+#SBATCH --output=HPT_LOG_intensity/HPT_BOOSTER.out
+#SBATCH --error=HPT_LOG_intensity/HPT_BOOSTER.err
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=24:00:00
@@ -12,21 +12,17 @@
 #SBATCH --account=esmtst
 
 # remove existing directories:
-rm -r /p/project/deepacf/kiste/patakchiyousefi1/CODES/CODES-MS2/PLAYGROUND/ATMOSCORRECT/HPT_LOG/*
-rm -r /p/scratch/deepacf/kiste/patakchiyousefi1/HPT/*
+#rm -r /p/project/deepacf/kiste/patakchiyousefi1/CODES/CODES-MS2/PLAYGROUND/ATMOSCORRECT/HPT_LOG_intensity/*
+#rm -r /p/scratch/deepacf/kiste/patakchiyousefi1/HPT_intensity/*
 
 # Set the maximum number of jobs running at a time
 MAX_JOBS=8
 
-LR_combo=(0.01)
-BS_combo=(16)
+LR_combo=(0.0001 0.001 0.01)
+BS_combo=(2 4 8 16)
 LR_factor_combo=(0.5)
-Filters_combo=(64)
-
-#LR_combo=(0.00001)
-#BS_combo=(16 32)
-#LR_factor_combo=(0.5)
-#Filters_combo=(32 64)
+Filters_combo=(16 32 64)
+mask_type="no_na_intensity"
 
 check_job_limit() {
   # Get the number of currently running and pending jobs with names starting with "HPT_DL_TRAIN_LR_"
@@ -50,8 +46,8 @@ for LR in "${LR_combo[@]}"; do
         sbatch <<EOF
 #!/bin/sh
 #SBATCH --job-name=HPT_DL_TRAIN_LR_${LR}_BS_${BS}_LRF_${LR_factor}_F_${Filters}
-#SBATCH --output=HPT_LOG/HPT_DL_TRAIN_LR_${LR}_BS_${BS}_LRF_${LR_factor}_F_${Filters}.out
-#SBATCH --error=HPT_LOG/HPT_DL_TRAIN_LR_${LR}_BS_${BS}_LRF_${LR_factor}_F_${Filters}.err
+#SBATCH --output=HPT_LOG_intensity/HPT_DL_TRAIN_LR_${LR}_BS_${BS}_LRF_${LR_factor}_F_${Filters}.out
+#SBATCH --error=HPT_LOG_intensity/HPT_DL_TRAIN_LR_${LR}_BS_${BS}_LRF_${LR_factor}_F_${Filters}.err
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=64
 #SBATCH --time=2:30:00
@@ -64,7 +60,7 @@ for LR in "${LR_combo[@]}"; do
 module load TensorFlow matplotlib xarray
 #source /p/project/deepacf/kiste/patakchiyousefi1/SC_VENV/bin/activate prc_env
 
-python DL_TRAIN-HPT.py --lr $LR --bs $BS --lr_factor $LR_factor --filters $Filters
+python DL_TRAIN-HPT.py --lr $LR --bs $BS --lr_factor $LR_factor --filters $Filters --mask_type $mask_type
 
 EOF
     

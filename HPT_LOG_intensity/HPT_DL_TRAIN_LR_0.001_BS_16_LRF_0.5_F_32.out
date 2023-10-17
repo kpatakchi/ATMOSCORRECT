@@ -1,0 +1,90 @@
+train_data_hourly_pr_['HRES']_['HSAF']_MM_6__spatiotemporal_128.256_2020-07-01T13_2023-03-26T23_no_na_intensity
+Data is available already
+Loading training data...
+mse_32_0.001_1e-14_0.5_2_16_8_0.1_64
+Training the model...
+Epoch 1/64
+
+Epoch 1: val_loss improved from inf to 0.08500, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT_intensity/mse_32_0.001_1e-14_0.5_2_16_8_0.1_64.h5
+1348/1348 - 89s - loss: 0.0793 - mse: 0.8282 - val_loss: 0.0850 - val_mse: 0.8483 - lr: 0.0010 - 89s/epoch - 66ms/step
+Epoch 2/64
+
+Epoch 2: val_loss improved from 0.08500 to 0.08215, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT_intensity/mse_32_0.001_1e-14_0.5_2_16_8_0.1_64.h5
+1348/1348 - 70s - loss: 0.0755 - mse: 0.7885 - val_loss: 0.0822 - val_mse: 0.8199 - lr: 0.0010 - 70s/epoch - 52ms/step
+Epoch 3/64
+
+Epoch 3: val_loss did not improve from 0.08215
+1348/1348 - 70s - loss: 0.0747 - mse: 0.7802 - val_loss: 0.0841 - val_mse: 0.8390 - lr: 0.0010 - 70s/epoch - 52ms/step
+Epoch 4/64
+
+Epoch 4: val_loss did not improve from 0.08215
+1348/1348 - 69s - loss: 0.0749 - mse: 0.7822 - val_loss: 0.0824 - val_mse: 0.8223 - lr: 0.0010 - 69s/epoch - 51ms/step
+Epoch 5/64
+
+Epoch 5: val_loss improved from 0.08215 to 0.07967, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT_intensity/mse_32_0.001_1e-14_0.5_2_16_8_0.1_64.h5
+1348/1348 - 72s - loss: 0.0741 - mse: 0.7739 - val_loss: 0.0797 - val_mse: 0.7951 - lr: 5.0000e-04 - 72s/epoch - 53ms/step
+Epoch 6/64
+
+Epoch 6: val_loss improved from 0.07967 to 0.07953, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT_intensity/mse_32_0.001_1e-14_0.5_2_16_8_0.1_64.h5
+1348/1348 - 69s - loss: 0.0734 - mse: 0.7666 - val_loss: 0.0795 - val_mse: 0.7937 - lr: 5.0000e-04 - 69s/epoch - 51ms/step
+Epoch 7/64
+
+Epoch 7: val_loss did not improve from 0.07953
+1348/1348 - 69s - loss: 0.0728 - mse: 0.7604 - val_loss: 0.0811 - val_mse: 0.8091 - lr: 5.0000e-04 - 69s/epoch - 51ms/step
+Epoch 8/64
+
+Epoch 8: val_loss did not improve from 0.07953
+1348/1348 - 69s - loss: 0.0725 - mse: 0.7570 - val_loss: 0.0796 - val_mse: 0.7941 - lr: 5.0000e-04 - 69s/epoch - 51ms/step
+Epoch 9/64
+
+Epoch 9: val_loss did not improve from 0.07953
+1348/1348 - 69s - loss: 0.0717 - mse: 0.7487 - val_loss: 0.0808 - val_mse: 0.8065 - lr: 2.5000e-04 - 69s/epoch - 51ms/step
+Epoch 10/64
+
+Epoch 10: val_loss improved from 0.07953 to 0.07891, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT_intensity/mse_32_0.001_1e-14_0.5_2_16_8_0.1_64.h5
+1348/1348 - 69s - loss: 0.0714 - mse: 0.7454 - val_loss: 0.0789 - val_mse: 0.7875 - lr: 2.5000e-04 - 69s/epoch - 51ms/step
+Epoch 11/64
+
+Epoch 11: val_loss did not improve from 0.07891
+1348/1348 - 69s - loss: 0.0712 - mse: 0.7436 - val_loss: 0.0789 - val_mse: 0.7878 - lr: 2.5000e-04 - 69s/epoch - 51ms/step
+Epoch 12/64
+
+Epoch 12: val_loss did not improve from 0.07891
+1348/1348 - 69s - loss: 0.0710 - mse: 0.7411 - val_loss: 0.0792 - val_mse: 0.7905 - lr: 2.5000e-04 - 69s/epoch - 51ms/step
+Epoch 13/64
+
+Epoch 13: val_loss improved from 0.07891 to 0.07786, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT_intensity/mse_32_0.001_1e-14_0.5_2_16_8_0.1_64.h5
+1348/1348 - 69s - loss: 0.0703 - mse: 0.7340 - val_loss: 0.0779 - val_mse: 0.7770 - lr: 1.2500e-04 - 69s/epoch - 51ms/step
+Epoch 14/64
+
+Epoch 14: val_loss did not improve from 0.07786
+1348/1348 - 69s - loss: 0.0699 - mse: 0.7300 - val_loss: 0.0794 - val_mse: 0.7927 - lr: 1.2500e-04 - 69s/epoch - 51ms/step
+Epoch 15/64
+
+Epoch 15: val_loss did not improve from 0.07786
+1348/1348 - 69s - loss: 0.0699 - mse: 0.7299 - val_loss: 0.0787 - val_mse: 0.7850 - lr: 1.2500e-04 - 69s/epoch - 51ms/step
+Epoch 16/64
+
+Epoch 16: val_loss did not improve from 0.07786
+1348/1348 - 69s - loss: 0.0694 - mse: 0.7242 - val_loss: 0.0786 - val_mse: 0.7847 - lr: 6.2500e-05 - 69s/epoch - 51ms/step
+Epoch 17/64
+
+Epoch 17: val_loss did not improve from 0.07786
+1348/1348 - 69s - loss: 0.0691 - mse: 0.7215 - val_loss: 0.0785 - val_mse: 0.7831 - lr: 6.2500e-05 - 69s/epoch - 51ms/step
+Epoch 18/64
+
+Epoch 18: val_loss did not improve from 0.07786
+1348/1348 - 69s - loss: 0.0685 - mse: 0.7152 - val_loss: 0.0780 - val_mse: 0.7782 - lr: 3.1250e-05 - 69s/epoch - 51ms/step
+Epoch 19/64
+
+Epoch 19: val_loss did not improve from 0.07786
+1348/1348 - 69s - loss: 0.0682 - mse: 0.7122 - val_loss: 0.0785 - val_mse: 0.7833 - lr: 3.1250e-05 - 69s/epoch - 51ms/step
+Epoch 20/64
+
+Epoch 20: val_loss did not improve from 0.07786
+1348/1348 - 69s - loss: 0.0681 - mse: 0.7107 - val_loss: 0.0781 - val_mse: 0.7793 - lr: 1.5625e-05 - 69s/epoch - 51ms/step
+Epoch 21/64
+
+Epoch 21: val_loss did not improve from 0.07786
+1348/1348 - 69s - loss: 0.0680 - mse: 0.7096 - val_loss: 0.0785 - val_mse: 0.7833 - lr: 1.5625e-05 - 69s/epoch - 51ms/step
+Saving and plotting the results...

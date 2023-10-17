@@ -7,6 +7,7 @@ parser.add_argument("--lr", type=float, required=True, help="Learning rate")
 parser.add_argument("--bs", type=int, required=True, help="Batch size")
 parser.add_argument("--lr_factor", type=float, required=True, help="Learning rate factor")
 parser.add_argument("--filters", type=int, required=True, help="Number of filters")
+parser.add_argument("--mask_type", type=str, required=True, help="Mask Type")
 args = parser.parse_args()
 
 # Define the data specifications:
@@ -21,7 +22,8 @@ date_end = "2023-03-26T23"
 min_delta_or_lr=0.00000000000001 #just to avoid any limitations
 
 variable = "pr"
-mask_type = "no_na"
+#mask_type = "no_na" or "no_na_intensity"
+mask_type = args.mask_type
 laginensemble = False
 
 # Define the following for network configs:
@@ -66,28 +68,15 @@ training_unique_name = Func_Train.generate_training_unique_name(loss, Filters, L
 print(training_unique_name)
 
 
-def custom_loss(y_true, y_pred):
-    mse_loss = tf.reduce_mean(tf.square(y_true - y_pred))
-    zero_precip_indices = tf.where(tf.equal(y_true, 0))
-    zero_precip_pred = tf.gather_nd(y_pred, zero_precip_indices)
-    penalty = tf.reduce_mean(tf.square(zero_precip_pred))
-    alpha = 5
-    combined_loss = mse_loss + alpha * penalty
-    return combined_loss
-
-strategy = tf.distribute.MirroredStrategy()
-
-with strategy.scope():
-
-    model = Func_Train.UNET_ATT(xpixels, ypixels, n_channels, Filters)
-    optimizer = tf.keras.optimizers.Adam(learning_rate=LR, name='Adam')
-    model.compile(optimizer=optimizer, loss=loss, weighted_metrics=["mse"])
+model = Func_Train.UNET_ATT(xpixels, ypixels, n_channels, Filters)
+optimizer = tf.keras.optimizers.Adam(learning_rate=LR, name='Adam')
+model.compile(optimizer=optimizer, loss=loss, weighted_metrics=["mse"])
 
 # Define the model checkpoint and early stopping callbacks
-model_path = PSCRATCH_DIR + '/HPT/' + training_unique_name + '.h5'
+model_path = PSCRATCH_DIR + '/HPT_intensity/' + training_unique_name + '.h5'
 checkpointer = tf.keras.callbacks.ModelCheckpoint(model_path, verbose=2, save_best_only=True, monitor='val_loss')
 callbacks = [tf.keras.callbacks.EarlyStopping(patience=patience, monitor='val_loss'),
-             tf.keras.callbacks.TensorBoard(log_dir=PSCRATCH_DIR + '/HPT/' + training_unique_name)]
+             tf.keras.callbacks.TensorBoard(log_dir=PSCRATCH_DIR + '/HPT_intensity/' + training_unique_name)]
 
 # Define the ReduceLROnPlateau callback
 reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=lr_factor, patience=lr_patience, min_lr=min_LR, min_delta=min_delta_or_lr)
@@ -103,4 +92,4 @@ results = model.fit(train_x, train_y, validation_data=(val_x, val_y, val_m),
 # Save and plot the results
 print("Saving and plotting the results...")
 RESULTS_DF = pd.DataFrame(results.history)
-RESULTS_DF.to_csv(PSCRATCH_DIR + "/HPT/" + training_unique_name + ".csv")
+RESULTS_DF.to_csv(PSCRATCH_DIR + "/HPT_intensity/" + training_unique_name + ".csv")

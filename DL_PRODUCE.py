@@ -9,6 +9,8 @@ parser.add_argument("--lr_factor", type=float, required=True, help="Learning rat
 parser.add_argument("--filters", type=int, required=True, help="Number of filters")
 parser.add_argument("--date_start", type=str, required=True, help="Start date")
 parser.add_argument("--date_end", type=str, required=True, help="End date")
+parser.add_argument("--mask_type", type=str, required=True, help="Mask Type")
+
 args = parser.parse_args()
 
 LR=args.lr
@@ -28,7 +30,7 @@ mm = "MM"  # or DM
 min_delta_or_lr=0.00000000000001 #just to avoid any limitations
 
 variable = "pr"
-mask_type = "no_na"
+#mask_type = "no_na" or "no_na_intensity"
 laginensemble = False
 
 # Define the following for network configs:
