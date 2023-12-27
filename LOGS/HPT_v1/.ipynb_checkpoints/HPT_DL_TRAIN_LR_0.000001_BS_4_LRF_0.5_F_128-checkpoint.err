@@ -1,0 +1,18 @@
+2023-07-23 03:34:04.639489: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-07-23 03:34:34.070686: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-07-23 03:34:35.723957: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31001 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:61:00.0, compute capability: 7.0
+2023-07-23 03:34:35.724776: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 31001 MB memory:  -> device: 1, name: Tesla V100-SXM2-32GB, pci bus id: 0000:62:00.0, compute capability: 7.0
+2023-07-23 03:34:35.725478: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:2 with 31001 MB memory:  -> device: 2, name: Tesla V100-SXM2-32GB, pci bus id: 0000:89:00.0, compute capability: 7.0
+2023-07-23 03:34:35.726570: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:3 with 31001 MB memory:  -> device: 3, name: Tesla V100-SXM2-32GB, pci bus id: 0000:8a:00.0, compute capability: 7.0
+2023-07-23 03:34:55.193249: E tensorflow/core/grappler/optimizers/meta_optimizer.cc:954] layout failed: INVALID_ARGUMENT: Size of values 0 does not match size of permutation 4 @ fanin shape inmodel/dropout/dropout/SelectV2-2-TransposeNHWCToNCHW-LayoutOptimizer
+2023-07-23 03:34:56.315657: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:428] Loaded cuDNN version 8600
+2023-07-23 03:34:58.914915: I tensorflow/compiler/xla/service/service.cc:173] XLA service 0x2ea5d630 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2023-07-23 03:34:58.914944: I tensorflow/compiler/xla/service/service.cc:181]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2023-07-23 03:34:58.914951: I tensorflow/compiler/xla/service/service.cc:181]   StreamExecutor device (1): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2023-07-23 03:34:58.914957: I tensorflow/compiler/xla/service/service.cc:181]   StreamExecutor device (2): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2023-07-23 03:34:58.914963: I tensorflow/compiler/xla/service/service.cc:181]   StreamExecutor device (3): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2023-07-23 03:34:58.921521: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2023-07-23 03:34:59.061540: I tensorflow/compiler/jit/xla_compilation_cache.cc:477] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+error: *** job 56950 CANCELLED DUE TO TIME LIMIT ***

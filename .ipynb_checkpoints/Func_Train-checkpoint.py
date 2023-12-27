@@ -742,10 +742,21 @@ def unmake_canvas(canvas, original_shape):
     data = canvas[:, top_pad:top_pad+original_dim1, left_pad:left_pad+original_dim2]
     return data
 
-def de_prepare_produce(Y_PRED, PREDICT_FILES, ATMOS_DATA, filename, model_data, date_start, date_end, variable, training_unique_name, onedelay):
+def de_prepare_produce(Y_PRED, PREDICT_FILES, ATMOS_DATA, filename, model_data, date_start, date_end, variable, training_unique_name, reference_data, onedelay):
         
     import xarray as xr
     import pandas as pd
+    
+    if reference_data == ["COSMO_REA6"]:
+        canvas_size = (400, 400) 
+        topo_dir=PPROJECT_DIR+'/IO/03-TOPOGRAPHY/EU-11-TOPO.npz'
+        trim=True
+        daily=True
+    if reference_data == ["HSAF"]:
+        topo_dir=PPROJECT_DIR+'/IO/03-TOPOGRAPHY/HSAF-TOPO.npz'
+        canvas_size = (128, 256)
+        trim=False
+        daily=False
     
     if onedelay==True:
         date_start = (pd.to_datetime(date_start) + pd.DateOffset(hours=1)).strftime("%Y-%m-%dT%H")
@@ -757,11 +768,20 @@ def de_prepare_produce(Y_PRED, PREDICT_FILES, ATMOS_DATA, filename, model_data, 
     # Retrieve lat and lon shape from the model
     lat_shape = model.latitude.shape[0]
     lon_shape = model.longitude.shape[0]
+    
+    # Load topographical data
+    SPP = spatiodataloader(topo_dir, model.shape)
+    SPP_canvas = make_canvas(SPP, canvas_size, trim)
+
+    # Define ocean mask
+    land= SPP_canvas[..., 2]>0
+    land = land * 1
+    
+    # mismatch predictions for ocean is removed. 
+    Y_PRED = Y_PRED * land
 
     # Restore the original shape of Y_PRED using unmake_canvas function
     Y_PRED = unmake_canvas(Y_PRED, (lat_shape, lon_shape))
-
-    # Check if the time dimension of Y_PRED and model match
 
     # Subtract Y_PRED from model
     diff = model - Y_PRED

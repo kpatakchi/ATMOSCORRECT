@@ -3,6 +3,7 @@ homedir=""              #if using hpc
 #define all the necessary directories:
 PPROJECT_DIR="/p/project/deepacf/kiste/patakchiyousefi1/"
 PSCRATCH_DIR="/p/scratch/deepacf/kiste/patakchiyousefi1/"
+PSCRATCH_DIR2="/p/scratch/cesmtst/patakchiyousefi1/"
 
 # General directories
 TRAIN_FILES=homedir+PSCRATCH_DIR+"TRAIN_FILES"
@@ -31,6 +32,7 @@ HRES_POST=homedir+PSCRATCH_DIR+"HRES_POST"
 
 # PARFLOW Directories
 PARFLOWCLM=homedir+PSCRATCH_DIR+"PARFLOWCLM"
+PARFLOWCLM2=homedir+PSCRATCH_DIR2+"PARFLOWCLM"
 ORIG_HRES=PARFLOWCLM+"/sim/ADAPTER_DE05_ECMWF-HRES_detforecast__FZJ-IBG3-ParFlowCLM380D_v03bJuwelsGpuProdClimatologyTl_PRhourly/forcing/o.data.MARS_retrieval"
 COR_HRES=PARFLOWCLM+"/sim/ADAPTER_DE05_ECMWF-HRES_detforecast__FZJ-IBG3-ParFlowCLM380D_v03bJuwelsGpuProdClimatologyTl_PRhourly_PRCORRECTED/forcing/o.data.MARS_retrieval"
 

@@ -10,6 +10,8 @@ parser.add_argument("--filters", type=int, required=True, help="Number of filter
 parser.add_argument("--date_start", type=str, required=True, help="Start date")
 parser.add_argument("--date_end", type=str, required=True, help="End date")
 parser.add_argument("--mask_type", type=str, required=True, help="Mask Type")
+parser.add_argument("--HPT_path", type=str, required=True, help="HPT_path")
+
 
 args = parser.parse_args()
 
@@ -19,6 +21,8 @@ lr_factor=args.lr_factor
 Filters=args.filters
 date_start=args.date_start
 date_end=args.date_end
+mask_type = args.mask_type
+HPT_path = args.HPT_path
 
 # Define the data specifications:
 model_data = ["HRES"]
@@ -27,6 +31,7 @@ task_name = "spatiotemporal"
 mm = "MM"  # or DM
 #date_start = "2020-07-01T13"
 #date_end = "2020-07-26T23"
+topo_dir = PPROJECT_DIR+'/IO/03-TOPOGRAPHY/HSAF-TOPO.npz'
 min_delta_or_lr=0.00000000000001 #just to avoid any limitations
 
 variable = "pr"
@@ -53,16 +58,16 @@ training_unique_name = Func_Train.generate_training_unique_name(loss, Filters, L
                                                     epochs)
 
 # Create the production data (if doesn't exist)
-Func_Train.prepare_produce(PPROJECT_DIR, PRODUCE_FILES, ATMOS_DATA, filename, model_data, reference_data, task_name, mm, date_start, date_end, variable, mask_type, laginensemble)
+Func_Train.prepare_produce(PPROJECT_DIR, PRODUCE_FILES + "/" + HPT_path , ATMOS_DATA, filename, model_data, reference_data, task_name, mm, date_start, date_end, variable, mask_type, laginensemble)
 
 # load the production data
 print("Loading production data...")
-produce_files=np.load(PRODUCE_FILES+"/"+"produce_for_"+filename)
-produce_x=produce_files["canvas_x"]
+produce_files=np.load(PRODUCE_FILES + "/" + HPT_path + "/" +"produce_for_" + filename)
+produce_x = produce_files["canvas_x"]
 
 # load the model and weights
 model = Func_Train.UNET_ATT(xpixels, ypixels, n_channels, Filters)
-model_path = PSCRATCH_DIR + "/HPT_v1/" + training_unique_name + ".h5"
+model_path = PSCRATCH_DIR + "/" + HPT_path + "/" + training_unique_name + '.h5'
 model.load_weights(model_path)
 
 # produce 
@@ -70,10 +75,10 @@ Y_PRED = model.predict(produce_x, verbose=1)
 Y_PRED=Y_PRED[..., 0]
 
 # Save in PREDICT_FILES
-np.savez(PREDICT_FILES + "/predicted_for_" + data_unique_name + "_" +training_unique_name, Y_PRED=Y_PRED)
+np.savez(PREDICT_FILES + "/" + HPT_path + "/predicted_for_" + data_unique_name + "_" +training_unique_name, Y_PRED=Y_PRED)
 print("saved")
 
 # Save in PREDICT_FILES
-Func_Train.de_prepare_produce(Y_PRED, PREDICT_FILES, ATMOS_DATA, filename, 
+Func_Train.de_prepare_produce(Y_PRED, PREDICT_FILES + "/" + HPT_path + "/", ATMOS_DATA, filename, 
                               model_data, date_start, date_end, variable, 
-                              training_unique_name, onedelay=True)
+                              training_unique_name, ["HSAF"], onedelay=True)

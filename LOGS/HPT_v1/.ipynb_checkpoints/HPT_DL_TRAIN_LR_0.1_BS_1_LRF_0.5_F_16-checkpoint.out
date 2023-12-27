@@ -1,0 +1,42 @@
+train_data_hourly_pr_['HRES']_['HSAF']_MM_6__spatiotemporal_128.256_2020-07-01T13_2023-03-26T23_no_na
+Data is available already
+Loading training data...
+mse_16_0.1_1e-05_0.5_2_1_8_0.5_64
+Training the model...
+Epoch 1/64
+
+Epoch 1: val_loss improved from inf to 0.26591, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_16_0.1_1e-05_0.5_2_1_8_0.5_64.h5
+11982/11982 - 147s - loss: 598.7003 - mse: 610869.5625 - val_loss: 0.2659 - val_mse: 565925.7500 - lr: 0.1000 - 147s/epoch - 12ms/step
+Epoch 2/64
+
+Epoch 2: val_loss did not improve from 0.26591
+11982/11982 - 128s - loss: 18.5409 - mse: 584722.5000 - val_loss: 23.3707 - val_mse: 590659.6875 - lr: 0.1000 - 128s/epoch - 11ms/step
+Epoch 3/64
+
+Epoch 3: val_loss did not improve from 0.26591
+11982/11982 - 128s - loss: 18.0542 - mse: 579897.5625 - val_loss: 6.1049 - val_mse: 566203.0625 - lr: 0.1000 - 128s/epoch - 11ms/step
+Epoch 4/64
+
+Epoch 4: val_loss did not improve from 0.26591
+11982/11982 - 132s - loss: 3.1527 - mse: 576992.4375 - val_loss: 1.4273 - val_mse: 565574.7500 - lr: 0.0500 - 132s/epoch - 11ms/step
+Epoch 5/64
+
+Epoch 5: val_loss did not improve from 0.26591
+11982/11982 - 134s - loss: 3.1860 - mse: 576471.9375 - val_loss: 4.1756 - val_mse: 569648.8125 - lr: 0.0500 - 134s/epoch - 11ms/step
+Epoch 6/64
+
+Epoch 6: val_loss did not improve from 0.26591
+11982/11982 - 134s - loss: 0.7242 - mse: 576667.5625 - val_loss: 3.0287 - val_mse: 566910.5625 - lr: 0.0250 - 134s/epoch - 11ms/step
+Epoch 7/64
+
+Epoch 7: val_loss did not improve from 0.26591
+11982/11982 - 134s - loss: 0.9459 - mse: 576696.3125 - val_loss: 3.5125 - val_mse: 568030.4375 - lr: 0.0250 - 134s/epoch - 11ms/step
+Epoch 8/64
+
+Epoch 8: val_loss did not improve from 0.26591
+11982/11982 - 133s - loss: 0.2569 - mse: 576648.6250 - val_loss: 3.2827 - val_mse: 567886.7500 - lr: 0.0125 - 133s/epoch - 11ms/step
+Epoch 9/64
+
+Epoch 9: val_loss did not improve from 0.26591
+11982/11982 - 133s - loss: 0.1754 - mse: 576695.7500 - val_loss: 4.0721 - val_mse: 568690.6875 - lr: 0.0125 - 133s/epoch - 11ms/step
+Saving and plotting the results...

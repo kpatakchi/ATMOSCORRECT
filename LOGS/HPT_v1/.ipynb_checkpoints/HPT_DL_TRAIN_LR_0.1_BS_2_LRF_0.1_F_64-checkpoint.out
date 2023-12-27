@@ -1,0 +1,10 @@
+train_data_hourly_pr_['HRES']_['HSAF']_MM_6__spatiotemporal_128.256_2020-07-01T13_2023-03-26T23_no_na
+Data is available already
+Loading training data...
+mse_64_0.1_1e-05_0.1_2_2_8_0.5_64
+Training the model...
+Epoch 1/64
+
+Epoch 1: val_loss improved from inf to 0.20132, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_64_0.1_1e-05_0.1_2_2_8_0.5_64.h5
+5991/5991 - 135s - loss: 628.1878 - mse: 638274.3125 - val_loss: 0.2013 - val_mse: 584654.5625 - lr: 0.1000 - 135s/epoch - 22ms/step
+Epoch 2/64

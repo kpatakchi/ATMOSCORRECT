@@ -8,7 +8,10 @@ parser.add_argument("--bs", type=int, required=True, help="Batch size")
 parser.add_argument("--lr_factor", type=float, required=True, help="Learning rate factor")
 parser.add_argument("--filters", type=int, required=True, help="Number of filters")
 parser.add_argument("--mask_type", type=str, required=True, help="Mask Type")
+parser.add_argument("--HPT_path", type=str, required=True, help="Which HPT path for results?")
 args = parser.parse_args()
+
+HPT_path=args.HPT_path #HPT_v1 or #HPT_v2
 
 # Define the data specifications:
 model_data = ["HRES"]
@@ -73,10 +76,10 @@ optimizer = tf.keras.optimizers.Adam(learning_rate=LR, name='Adam')
 model.compile(optimizer=optimizer, loss=loss, weighted_metrics=["mse"])
 
 # Define the model checkpoint and early stopping callbacks
-model_path = PSCRATCH_DIR + '/HPT_intensity/' + training_unique_name + '.h5'
+model_path = PSCRATCH_DIR + HPT_path + training_unique_name + '.h5'
 checkpointer = tf.keras.callbacks.ModelCheckpoint(model_path, verbose=2, save_best_only=True, monitor='val_loss')
 callbacks = [tf.keras.callbacks.EarlyStopping(patience=patience, monitor='val_loss'),
-             tf.keras.callbacks.TensorBoard(log_dir=PSCRATCH_DIR + '/HPT_intensity/' + training_unique_name)]
+             tf.keras.callbacks.TensorBoard(log_dir=PSCRATCH_DIR + HPT_path + training_unique_name)]
 
 # Define the ReduceLROnPlateau callback
 reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=lr_factor, patience=lr_patience, min_lr=min_LR, min_delta=min_delta_or_lr)
@@ -92,4 +95,4 @@ results = model.fit(train_x, train_y, validation_data=(val_x, val_y, val_m),
 # Save and plot the results
 print("Saving and plotting the results...")
 RESULTS_DF = pd.DataFrame(results.history)
-RESULTS_DF.to_csv(PSCRATCH_DIR + "/HPT_intensity/" + training_unique_name + ".csv")
+RESULTS_DF.to_csv(PSCRATCH_DIR + HPT_path + training_unique_name + ".csv")

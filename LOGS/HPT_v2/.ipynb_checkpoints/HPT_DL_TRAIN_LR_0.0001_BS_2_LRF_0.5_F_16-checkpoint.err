@@ -1,0 +1,3 @@
+usage: DL_TRAIN-HPT.py [-h] --lr LR --bs BS --lr_factor LR_FACTOR --filters
+                       FILTERS --mask_type MASK_TYPE
+DL_TRAIN-HPT.py: error: argument --mask_type: expected one argument

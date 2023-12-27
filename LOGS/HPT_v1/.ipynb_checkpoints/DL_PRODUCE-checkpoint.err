@@ -1,0 +1,3 @@
+usage: DL_PRODUCE.py [-h] --lr LR --bs BS --lr_factor LR_FACTOR --filters
+                     FILTERS --date_start DATE_START --date_end DATE_END
+DL_PRODUCE.py: error: the following arguments are required: --lr, --bs, --lr_factor, --filters

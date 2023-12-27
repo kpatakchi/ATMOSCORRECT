@@ -1,6 +1,0 @@
-train_data_hourly_pr_['HRES']_['HSAF']_MM_6__spatiotemporal_128.256_2020-07-01T13_2023-03-26T23_no_na
-Data is available already
-Loading training data...
-mse_32_0.1_1e-07_0.1_2_4_8_0.5_64
-Training the model...
-Epoch 1/64

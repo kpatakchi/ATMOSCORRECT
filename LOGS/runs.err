@@ -1,0 +1,4 @@
+  File "STATS.py", line 2
+    !pip install xskillscore
+    ^
+SyntaxError: invalid syntax

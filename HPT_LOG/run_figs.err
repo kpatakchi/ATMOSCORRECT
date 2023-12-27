@@ -1,2 +1,0 @@
-Figs.py:262: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
-  plt.tight_layout()
