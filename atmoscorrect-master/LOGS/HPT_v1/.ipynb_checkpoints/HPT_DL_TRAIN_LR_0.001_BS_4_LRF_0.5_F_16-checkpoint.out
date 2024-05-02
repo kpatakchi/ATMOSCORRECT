@@ -1,0 +1,30 @@
+train_data_hourly_pr_['HRES']_['HSAF']_MM_6__spatiotemporal_128.256_2020-07-01T13_2023-03-26T23_no_na
+Data is available already
+Loading training data...
+mse_16_0.001_1e-09_0.5_2_4_8_0.5_64
+Training the model...
+Epoch 1/64
+
+Epoch 1: val_loss improved from inf to 0.09421, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_16_0.001_1e-09_0.5_2_4_8_0.5_64.h5
+2996/2996 - 65s - loss: 0.0866 - mse: 215286.6406 - val_loss: 0.0942 - val_mse: 231598.2656 - lr: 0.0010 - 65s/epoch - 22ms/step
+Epoch 2/64
+
+Epoch 2: val_loss improved from 0.09421 to 0.08974, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_16_0.001_1e-09_0.5_2_4_8_0.5_64.h5
+2996/2996 - 42s - loss: 0.0835 - mse: 215286.7500 - val_loss: 0.0897 - val_mse: 231596.1094 - lr: 0.0010 - 42s/epoch - 14ms/step
+Epoch 3/64
+
+Epoch 3: val_loss did not improve from 0.08974
+2996/2996 - 42s - loss: 0.0827 - mse: 215286.5156 - val_loss: 0.0909 - val_mse: 231611.4688 - lr: 0.0010 - 42s/epoch - 14ms/step
+Epoch 4/64
+
+Epoch 4: val_loss improved from 0.08974 to 0.08946, saving model to /p/scratch/deepacf/kiste/patakchiyousefi1//HPT/mse_16_0.001_1e-09_0.5_2_4_8_0.5_64.h5
+2996/2996 - 42s - loss: 0.0821 - mse: 215286.3906 - val_loss: 0.0895 - val_mse: 231607.4375 - lr: 0.0010 - 42s/epoch - 14ms/step
+Epoch 5/64
+
+Epoch 5: val_loss did not improve from 0.08946
+2996/2996 - 41s - loss: 0.0812 - mse: 215286.3438 - val_loss: 0.0902 - val_mse: 231600.2656 - lr: 0.0010 - 41s/epoch - 14ms/step
+Epoch 6/64
+
+Epoch 6: val_loss did not improve from 0.08946
+2996/2996 - 41s - loss: 0.0806 - mse: 215285.7188 - val_loss: 0.0913 - val_mse: 231601.5156 - lr: 0.0010 - 41s/epoch - 14ms/step
+Epoch 7/64
