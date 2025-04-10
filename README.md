@@ -8,7 +8,7 @@ JUNE 2023
 
 # Intro:
 
-This repository focuses on correcting HRES precipitation forecast errors using H-SAF satellite-based data through U-Net. This repo covers data preparation, preprocessing, training, and statistical analysis to enhance the accuracy of precipitation data, towards its application in hydrological models.
+This repository focuses on correcting HRES precipitation forecast errors using H-SAF satellite-based data through U-Net. This repo covers data preparation, preprocessing, training, and statistical analysis to enhance the accuracy of precipitation data, towards its application in hydrological models. The scripts in this repo were used in this publication: Impact of deep learning-driven precipitation corrected data using near real-time satellite-based observations and model forecast in an integrated hydrological model (http://dx.doi.org/10.3389/frwa.2024.1439906)
 
 # Guide:
 
